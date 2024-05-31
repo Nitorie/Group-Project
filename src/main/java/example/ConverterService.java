@@ -23,8 +23,8 @@ public class ConverterService {
                 .queryParam("units", "metric")
                 .toUriString();
         RestTemplate restTemplate = new RestTemplate();
-        Map forObject = restTemplate.getForObject(url, Map.class);
-        return forObject;
+        Map<String, Object> weatherData = restTemplate.getForObject(url, Map.class);
+        return weatherData;
     }
 
     public double convertToFahrenheit(double celsius) {
