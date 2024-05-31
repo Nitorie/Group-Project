@@ -3,11 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <title>Conversion Result</title>
+    <style>
+        h1 {
+        text-align: center;
+    font-size: 2.5em;
+}
+    body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color:#B7DCF3;
+}
+p {
+    color: #555;
+    text-align: center;
+    margin: 20px;
+    font-size: 1.1em;
+}
+
+                   button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+        button.buttonInCenter {
+    margin: 0 auto;
+    display: block;
+}
+        a.button-link {
+        text-decoration: none;
+        }
+        </style>
 </head>
 <body>
 <h1>Conversion Result</h1>
 <p th:text="'Temperature in Celsius: ' + ${celsius} + '°C'"></p>
 <p th:text="'Temperature in Fahrenheit: ' + ${fahrenheit} + '°F'"></p>
-<a href="/">Convert another temperature</a>
+<a href="/" class="button-link">
+    <button type = "button" class = "buttonInCenter"> Convert another temperature </button>
+</a>
 </body>
 </html>
